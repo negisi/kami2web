@@ -217,6 +217,19 @@ function initHeaderScroll() {
       }
     });
   });
+
+  // Scroll to top when clicking links that target the fixed header
+  const headerLinks = document.querySelectorAll('a[href="#header"]');
+  headerLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? "auto" : "smooth"
+      });
+    });
+  });
 }
 
 // Mobile Menu Toggle
