@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="中野区上高田二丁目町会の公式Webサイトです。「出会い、ふれあい、助けあい」をモットーに、地域の歴史、年間行事、防犯・防災の取り組み、加入案内をお届けします。">
+  <meta name="keywords" content="上高田二丁目町会, 上高田, 中野区, 町会, 自治会, 防災, 防犯, 二丁目祭り">
+  <title>上高田二丁目町会 | 出会い、ふれあい、助けあい</title>
+  
+  <!-- Noto Sans JP from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+     Header (Sticky Navigation with Accessibility Toggle)
+     ========================================================================== -->
+  <header class="site-header" id="header" role="banner">
+    <div class="container header-container">
+      <a href="#header" class="logo-link" aria-label="上高田二丁目町会 ホームへ">
+        <img src="/logo.png" alt="上高田二丁目町会 ロゴ" class="logo-icon">
+        <div class="logo-text">
+          <span class="logo-title">上高田二丁目町会</span>
+          <span class="logo-sub">中野区上高田二丁目</span>
+        </div>
+      </a>
+      
+      <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開閉する">
+        &#9776;
+      </button>
+
+      <nav class="nav-menu" id="primary-nav" role="navigation" aria-label="メインナビゲーション">
+        <a href="#header" class="nav-link active">ホーム</a>
+        <a href="#about" class="nav-link">町会について</a>
+        <a href="#calendar" class="nav-link">年間行事</a>
+        <a href="#safety" class="nav-link">防災・安全</a>
+        <a href="#join" class="nav-link">加入案内・問合せ</a>
+        
+        <!-- Text Size Toggle for Elderly Accessibility -->
+        <div class="accessibility-control">
+          <button id="size-toggle-btn" class="btn-size-toggle" aria-label="文字の大きさを切り替える">
+            <span class="size-icon" aria-hidden="true">A<sup>+</sup></span>
+            <span class="size-label">文字サイズ: 標準</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+     Main Content
+     ========================================================================== -->
+  <main id="main-content" role="main">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-layout">
+          <div class="hero-content-left">
+            <div class="hero-badge-motto">
+              <span class="hero-motto-decor" aria-hidden="true">✨</span>
+              <span>町会モットー「出会い、ふれあい、助けあい」</span>
+            </div>
+            <h1 class="hero-title">
+              安心と温もりでつながる、<br>
+              <span>上高田二丁目町会</span>の街づくり
+            </h1>
+            <p class="hero-description">
+              私たちは中野区上高田2丁目で活動する町会です。下町感覚あふれる温かい繋がりを大切に、若者も高齢者も誰もが「住んで良かった」と思える安心・安全な街を目指して活動しています。
+            </p>
+            <div class="hero-buttons">
+              <a href="#join" class="btn btn-primary" id="btn-hero-join">町会に加入する</a>
+              <a href="#calendar" class="btn btn-outline" id="btn-hero-calendar">行事予定を見る</a>
+            </div>
+          </div>
+          
+          <div class="hero-graphic">
+            <div class="hero-shape shape-1" aria-hidden="true"></div>
+            <div class="hero-shape shape-2" aria-hidden="true"></div>
+            <!-- Neighborhood Image -->
+            <div class="hero-image-wrap">
+              <img src="/neighborhood_hero.jpg" alt="上高田二丁目町会の温かい街並みと住民のふれあいの様子" class="hero-image">
+            </div>
+            <!-- President Welcome Card -->
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <img src="/kaicho.png" alt="町会長 菅野 喜博" class="president-avatar">
+                <div class="president-title">
+                  <span class="president-role">上高田二丁目町会 現会長</span>
+                  <span class="president-name">菅野 喜博</span>
+                </div>
+              </div>
+              <p class="president-message">
+                「近年は若い世代の行事への参加も増え、町全体がさらに元気になっています。新着情報エリアでは、最新の事業計画スケジュールに沿ったイベント案内や活動報告を随時更新・お届けしてまいります。皆様の温かいご参加をお待ちしております。」
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Signature: Next Event Dynamic Announcement Board -->
+        <div id="next-event-banner">
+          <!-- Populated dynamically by main.js. Fallback text for SEO below -->
+          <div class="notice-board">
+            <div class="notice-info">
+              <div class="notice-icon-wrap">📅</div>
+              <div class="notice-text-content">
+                <div class="notice-label">行事予定</div>
+                <div class="notice-title">上高田二丁目町会 年間イベント</div>
+                <div class="notice-date-loc">
+                  <span>地域の安全や交流を深める多彩な行事を企画しています。</span>
+                </div>
+              </div>
+            </div>
+            <a href="#calendar" class="notice-btn">スケジュールを見る &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title" id="about-title">町会について</h2>
+          <p class="section-subtitle">上高田二丁目町会の概要・あゆみ</p>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-content-left">
+            <div class="about-card">
+              <h3>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" style="color: var(--color-accent);"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>対象区域と目指す姿</span>
+              </h3>
+              <p style="margin-bottom: 16px;">
+                <strong>対象区域：</strong>中野区上高田2丁目（※1番、3番、40番地を除く全域）
+              </p>
+              <p>
+                明るく元気な下町感覚溢れる温かい町、若者も高齢者も安心し「住んで良かった」と思っていただける町を目指して活動しています。近年は世代交代や新旧住民の融和も進み、夏祭りや防災活動に参加する若い世代も毎年増えています。
+              </p>
+            </div>
+            
+            <div class="about-card">
+              <h3>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" style="color: var(--color-accent);"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>町会のあゆみ（歴史）</span>
+              </h3>
+              <p>
+                昭和56年（1981年）12月6日、旧神田信用金庫（現・興産信用金庫）中野支店3階ホールで臨時総会が開かれ、新しく「上高田二丁目町会」が誕生しました。
+              </p>
+              
+              <div class="history-timeline" role="list">
+                <div class="timeline-step" role="listitem">
+                  <div class="step-year">1981年 (昭和56年) 12月</div>
+                  <div class="step-title">町会の発足</div>
+                  <div class="step-desc">地域住民の強い要望を受け臨時総会にて正式発足。</div>
+                </div>
+                <div class="timeline-step" role="listitem">
+                  <div class="step-year">1981年 (昭和56年) 年末</div>
+                  <div class="step-title">初代夜警（パトロール）の開始</div>
+                  <div class="step-desc">発足当年の年末からただちに防犯夜警活動をスタート。</div>
+                </div>
+                <div class="timeline-step" role="listitem">
+                  <div class="step-year">現在</div>
+                  <div class="step-title">地域に密着した多角的な活動</div>
+                  <div class="step-desc">防災・防犯・環境美化・伝統行事継承を推進中。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Successive Presidents Sidebar (Interactive) -->
+          <div class="about-sidebar">
+            <div class="succession-wrap">
+              <div class="succession-title-area">
+                <h3 class="succession-title">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" style="color: var(--color-accent);"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span>歴代会長の系譜</span>
+                </h3>
+                <span class="badge badge-primary" style="font-size: 0.7rem;">タップで実績を表示</span>
+              </div>
+              
+              <div class="succession-list" id="presidents-list" role="group" aria-label="歴代会長リスト">
+                <!-- Populated dynamically by main.js -->
+              </div>
+              
+              <!-- President detail panel shown on select -->
+              <div class="succession-details" id="president-detail-panel" aria-live="polite">
+                <!-- Populated dynamically by main.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Section (Annual Events) -->
+    <section class="calendar-section" id="calendar">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title" id="calendar-title">年間行事案内</h2>
+          <p class="section-subtitle">地域をつなぐ伝統行事と住民交流のスケジュール</p>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="calendar-filters" id="calendar-filters" role="tablist" aria-label="行事カテゴリの絞り込み">
+          <!-- Populated dynamically by main.js -->
+        </div>
+        
+        <!-- Events Cards Grid -->
+        <div class="calendar-grid" id="events-grid" role="region" aria-live="polite" aria-label="行事カレンダー">
+          <!-- Fallback content for SEO indexing / No-JS -->
+          <noscript>
+            <div style="background:#fff; padding:20px; border-radius:8px; border:1px solid #ddd;">
+              <p>JavaScriptを有効にすると、詳細な絞り込みやポップアップ情報がご覧いただけます。</p>
+              <ul>
+                <li><strong>5月11日</strong>：定期総会・防犯講話（上高田高齢者会館）</li>
+                <li><strong>7月21日〜30日</strong>：なつやすみラジオ体操（上高田二丁目公園）</li>
+                <li><strong>9月13日〜14日</strong>：二丁目祭り（上高田 氷川神社周辺）</li>
+                <li><strong>9月15日</strong>：敬老事業（町内対象者宅）</li>
+                <li><strong>10月4日</strong>：救命法講習会（上高田区民活動センター）</li>
+                <li><strong>10月25日〜26日</strong>：第50回 上高田地区まつり（上高田地区全体）</li>
+                <li><strong>11月30日</strong>：もちつき大会（上高田高齢者会館横）</li>
+                <li><strong>12月22日〜28日</strong>：歳末特別警戒パトロール（町内全域）</li>
+                <li><strong>3月1日</strong>：防災フェスタ（上高田二丁目公園）</li>
+                <li><strong>3月14日</strong>：年度末配付物配達事業（町会員宅）</li>
+              </ul>
+            </div>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section class="safety-section" id="safety">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title" id="safety-title">防災・防犯・安全</h2>
+          <p class="section-subtitle">災害に強く、犯罪のない安全な街を目指して</p>
+        </div>
+        
+        <div class="safety-grid">
+          <div class="safety-content">
+            <p class="safety-intro">
+              上高田二丁目町会では、いざという時に「自分たちの街は自分たちで守る」体制を整えています。日頃からの訓練と設備の点検・維持が、確かな安全に繋がっています。
+            </p>
+            
+            <div class="safety-cards">
+              <div class="safety-measure-card">
+                <div class="safety-card-icon" aria-hidden="true">👮</div>
+                <div class="safety-card-text">
+                  <h4>日常の防犯・防災活動</h4>
+                  <p>毎月定期的に実施している「防犯パトロール」に加え、万が一の災害に備えた「防災訓練」や、街頭に設置された「街頭消火器点検」を自主的に行っています。</p>
+                </div>
+              </div>
+              
+              <div class="safety-measure-card">
+                <div class="safety-card-icon" aria-hidden="true">🛠️</div>
+                <div class="safety-card-text">
+                  <h4>防災資機材の維持管理</h4>
+                  <p>震災や火災の発生時に重要となる「可搬式消防ポンプ」や、消火栓に繋いで初期消火を行える「スタンドパイプ」などの防災資機材を配備。有事に確実に稼働するよう、定期点検と試運転・始動訓練を行っています。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="safety-illustration">
+            <span class="safety-badge-info" aria-hidden="true">点検済・配備中</span>
+            <h4>町会配備の主要防災資機材</h4>
+            <p>上高田二丁目公園や格納庫に、災害発生時の初期消火活動を支える最新設備を管理・点検しています。</p>
+            
+            <div class="equipment-showcase">
+              <div class="eq-item">
+                <span class="eq-icon" aria-hidden="true">🚒</span>
+                <span class="eq-name">可搬式ポンプ</span>
+                <span class="eq-status">良好</span>
+              </div>
+              <div class="eq-item">
+                <span class="eq-icon" aria-hidden="true">🚰</span>
+                <span class="eq-name">スタンドパイプ</span>
+                <span class="eq-status">良好</span>
+              </div>
+              <div class="eq-item">
+                <span class="eq-icon" aria-hidden="true">🧯</span>
+                <span class="eq-name">街頭消火器</span>
+                <span class="eq-status">点検済</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join & Contact Section -->
+    <section class="join-section" id="join">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title" id="join-title">加入案内・お問い合わせ</h2>
+          <p class="section-subtitle">明るく安心な街づくりの一歩を踏み出してみませんか？</p>
+        </div>
+        
+        <div class="contact-grid">
+          <!-- Join Information -->
+          <div class="join-info-wrap">
+            <div class="join-price-card">
+              <div class="join-price-label">町会運営費（年会費）</div>
+              <div class="join-price-value">年額 1,500<span>円</span></div>
+              <p class="join-price-desc">
+                皆様からいただいた町会費は、防犯灯の電気代、防犯パトロール・夜警の資材、もちつき大会やお祭りなどの行事運営、災害対策用の備蓄・防災資機材の維持管理などに大切に使用されています。
+              </p>
+            </div>
+            
+            <div class="join-steps" role="list" aria-label="入会の流れ">
+              <div class="join-step-item" role="listitem">
+                <div class="join-step-num" aria-hidden="true">1</div>
+                <div class="join-step-text">
+                  <h4>お問い合わせ・お申込み</h4>
+                  <p>右のフォーム、または町会メールアドレス宛に入会希望の旨をご連絡ください。</p>
+                </div>
+              </div>
+              
+              <div class="join-step-item" role="listitem">
+                <div class="join-step-num" aria-hidden="true">2</div>
+                <div class="join-step-text">
+                  <h4>班長によるご挨拶・集金</h4>
+                  <p>お住まいの地域の「班長（町会役員）」がご自宅へお伺いし、詳細をご案内した上で年会費を集金させていただきます。</p>
+                </div>
+              </div>
+              
+              <div class="join-step-item" role="listitem">
+                <div class="join-step-num" aria-hidden="true">3</div>
+                <div class="join-step-text">
+                  <h4>会員活動のスタート</h4>
+                  <p>回覧板の配布や行事のご案内をお届けします。いざという時の助けあい、楽しいイベントでのふれあいでお待ちしています。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Form Card -->
+          <div class="contact-form-card">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" style="color: var(--color-accent);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>入会・お問い合わせフォーム</span>
+            </h3>
+            
+            <form id="contact-form" novalidate>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">お名前 <span class="form-required" aria-hidden="true">必須</span></label>
+                  <input type="text" id="form-name" class="form-input" placeholder="山田 太郎" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                  <label for="form-type" class="form-label">お問合せ種別</label>
+                  <select id="form-type" class="form-input" style="height: 48px;">
+                    <option value="入会希望">町会への加入希望</option>
+                    <option value="活動について">活動についてのお問い合わせ</option>
+                    <option value="防災・防犯">防災・防犯について</option>
+                    <option value="その他">その他のお問い合わせ</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="form-email" class="form-label">メールアドレス <span class="form-required" aria-hidden="true">必須</span></label>
+                <input type="email" id="form-email" class="form-input" placeholder="example@mail.com" required aria-required="true">
+              </div>
+              
+              <div class="form-group">
+                <label for="form-message" class="form-label">メッセージ内容 <span class="form-required" aria-hidden="true">必須</span></label>
+                <textarea id="form-message" class="form-input" placeholder="上高田2丁目に引っ越してきたため、入会を希望します。詳しい手続きについて教えてください。" required aria-required="true"></textarea>
+              </div>
+              
+              <button type="submit" class="form-submit-btn" id="btn-submit">
+                <span>送信する（メールソフト起動確認）</span>
+                <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+     Footer
+     ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <img src="/logo.png" alt="上高田二丁目町会 ロゴ" class="footer-logo-icon">
+            <span class="footer-logo-text">上高田二丁目町会</span>
+          </div>
+          <p class="footer-motto">
+            町会モットー：「出会い、ふれあい、助けあい」
+          </p>
+          <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); line-height: 1.5; margin-bottom: 0;">
+            対象地域：東京都中野区上高田二丁目（1・3・40番地を除く全域）<br>
+            ※地域の皆様が住みよく、安全な街になるよう日々活動しています。
+          </p>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>リンク</h4>
+          <ul class="footer-links">
+            <li><a href="#header" class="footer-link">ホーム</a></li>
+            <li><a href="#about" class="footer-link">町会について（概要・歴史）</a></li>
+            <li><a href="#calendar" class="footer-link">年間行事スケジュール</a></li>
+            <li><a href="#safety" class="footer-link">防災・安全の取り組み</a></li>
+            <li><a href="#join" class="footer-link">加入案内・お問い合わせ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact-col">
+          <h4>事務局窓口</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">📧</span>
+              <div>
+                <span style="font-size: 0.75rem; display: block; color: rgba(255,255,255,0.6);">メールアドレス</span>
+                <a href="mailto:kmtkd2@gmail.com" class="footer-email" id="footer-email-link">kmtkd2@gmail.com</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">📢</span>
+              <p style="margin-bottom: 0; font-size: 0.8rem; line-height: 1.5; color: rgba(255,255,255,0.7);">
+                ご入会のお申込み、地域の安全に関するご相談、行事ボランティアへの参加希望など、お気軽にメールにてご連絡ください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2026 上高田二丁目町会. All Rights Reserved.
+        </p>
+        <p class="footer-extra">
+          中野区上高田二丁目町会 自治会公式Webポータル
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="./main.js" type="module"></script>
+</body>
+</html>
