@@ -175,24 +175,50 @@
             </div>
           </div>
           
-          <!-- Successive Presidents Sidebar (Interactive) -->
+          <!-- Successive Presidents Sidebar -->
           <div class="about-sidebar">
             <div class="succession-wrap">
-              <div class="succession-title-area">
-                <h3 class="succession-title">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" style="color: var(--color-accent);"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                  <span>歴代会長の系譜</span>
-                </h3>
-                <span class="badge badge-primary" style="font-size: 0.7rem;">タップで実績を表示</span>
-              </div>
+              <h3 class="succession-title" style="margin-bottom: 24px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" style="color: var(--color-accent);"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>歴代会長の系譜</span>
+              </h3>
               
-              <div class="succession-list" id="presidents-list" role="group" aria-label="歴代会長リスト">
-                <!-- Populated dynamically by main.js -->
-              </div>
-              
-              <!-- President detail panel shown on select -->
-              <div class="succession-details" id="president-detail-panel" aria-live="polite">
-                <!-- Populated dynamically by main.js -->
+              <div class="succession-timeline" role="list" aria-label="歴代会長の系譜">
+                <div class="succession-timeline-step" role="listitem">
+                  <div class="succession-step-num">1</div>
+                  <div class="succession-step-info">
+                    <div class="succession-step-name">尾花 悦雄 <span class="succession-step-role">初代会長</span></div>
+                    <div class="succession-step-term">昭和56年12月 〜 昭和60年3月</div>
+                  </div>
+                </div>
+                <div class="succession-timeline-step" role="listitem">
+                  <div class="succession-step-num">2</div>
+                  <div class="succession-step-info">
+                    <div class="succession-step-name">木下 宏 <span class="succession-step-role">第二代会長</span></div>
+                    <div class="succession-step-term">昭和60年4月 〜 平成8年5月</div>
+                  </div>
+                </div>
+                <div class="succession-timeline-step" role="listitem">
+                  <div class="succession-step-num">3</div>
+                  <div class="succession-step-info">
+                    <div class="succession-step-name">斎藤 喜久雄 <span class="succession-step-role">第三代会長</span></div>
+                    <div class="succession-step-term">平成8年4月 〜 平成28年5月</div>
+                  </div>
+                </div>
+                <div class="succession-timeline-step" role="listitem">
+                  <div class="succession-step-num">4</div>
+                  <div class="succession-step-info">
+                    <div class="succession-step-name">山本 建司 <span class="succession-step-role">第四代会長</span></div>
+                    <div class="succession-step-term">平成28年4月 〜 令和3年3月</div>
+                  </div>
+                </div>
+                <div class="succession-timeline-step current" role="listitem">
+                  <div class="succession-step-num">5</div>
+                  <div class="succession-step-info">
+                    <div class="succession-step-name">菅野 喜博 <span class="succession-step-role">現会長</span></div>
+                    <div class="succession-step-term">令和3年4月 〜 現在</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -129,44 +129,7 @@ const EVENTS_DATA = [
   }
 ];
 
-// Successive Presidents Data
-const PRESIDENTS_DATA = [
-  {
-    id: "pres-1",
-    generation: "初代会長",
-    name: "尾花 悦雄",
-    term: "昭和56年12月 〜 昭和60年3月",
-    achievement: "上高田二丁目町会の創設期を牽引。発足年の年末から直ちに「夜警（歳末パトロール）」を開始するなど、現在の地域安全活動の礎を築きました。"
-  },
-  {
-    id: "pres-2",
-    generation: "第二代会長",
-    name: "木下 宏",
-    term: "昭和60年4月 〜 平成8年5月",
-    achievement: "約11年間にわたる長期の在任期間中、地域の交流行事の活性化や町内組織の整備を進め、安定した町会運営の土台を作りました。"
-  },
-  {
-    id: "pres-3",
-    generation: "第三代会長",
-    name: "斎藤 喜久雄",
-    term: "平成8年4月 〜 平成28年5月",
-    achievement: "20年間にわたり会長を務め、防災資機材の導入促進や「もちつき大会」などの恒例行事の拡大、上高田地区とのさらなる連携強化を図りました。"
-  },
-  {
-    id: "pres-4",
-    generation: "第四代会長",
-    name: "山本 建司",
-    term: "平成28年4月 〜 令和3年3月",
-    achievement: "若い世帯への情報発信や参加を促し、子ども神輿の巡行活性化など地域の新旧住民の融和と活性化に力を尽くしました。"
-  },
-  {
-    id: "pres-5",
-    generation: "現会長",
-    name: "菅野 喜博",
-    term: "令和3年4月 〜 現在",
-    achievement: "コロナ禍での新しい町会の在り方を模索。防災フェスタの開催や、若い世代も高齢者も「住んで良かった」と思えるような温かい町づくりを現在進行形で進めています。"
-  }
-];
+// Successive Presidents list is statically defined in HTML
 
 // ==========================================================================
 // 2. Initialization & Dom Load
@@ -176,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initAccessibilityMode();
   initNextEventAnnounce();
-  initSuccessionTimeline();
   initEventCalendar();
   initContactForm();
   initScrollAnimations();
@@ -345,79 +307,7 @@ function initNextEventAnnounce() {
   nextEventWrap.innerHTML = nextEventHtml;
 }
 
-// ==========================================================================
-// 6. About Section: Successive Presidents Interactive Timeline
-// ==========================================================================
-function initSuccessionTimeline() {
-  const listContainer = document.getElementById("presidents-list");
-  const detailPanel = document.getElementById("president-detail-panel");
-  if (!listContainer || !detailPanel) return;
 
-  // Render list of presidents
-  let listHtml = "";
-  PRESIDENTS_DATA.forEach((pres, index) => {
-    const isCurrent = pres.id === "pres-5";
-    const isActive = isCurrent ? "active" : "";
-    listHtml += `
-      <div class="president-item ${isActive}" data-id="${pres.id}" tabindex="0" role="button" aria-expanded="${isCurrent}">
-        <div class="president-item-left">
-          <div class="president-badge-num">${index + 1}</div>
-          <div class="president-item-info">
-            <span class="president-item-role">${pres.generation}</span>
-            <span class="president-item-name">${pres.name}</span>
-          </div>
-        </div>
-        <div class="president-item-term">${pres.term}</div>
-      </div>
-    `;
-  });
-  listContainer.innerHTML = listHtml;
-
-  // Show default active president (current)
-  showPresidentDetail("pres-5");
-
-  // Add click / keyboard listeners
-  const items = listContainer.querySelectorAll(".president-item");
-  items.forEach(item => {
-    const selectHandler = () => {
-      items.forEach(i => {
-        i.classList.remove("active");
-        i.setAttribute("aria-expanded", "false");
-      });
-      item.classList.add("active");
-      item.setAttribute("aria-expanded", "true");
-      
-      const presId = item.getAttribute("data-id");
-      showPresidentDetail(presId);
-    };
-
-    item.addEventListener("click", selectHandler);
-    item.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        selectHandler();
-      }
-    });
-  });
-
-  function showPresidentDetail(id) {
-    const data = PRESIDENTS_DATA.find(p => p.id === id);
-    if (!data) return;
-
-    detailPanel.innerHTML = `
-      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--color-primary);">
-        🏆 ${data.generation}：<strong>${data.name}</strong>
-      </h4>
-      <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px; font-weight: 700;">
-        📅 任期: ${data.term}
-      </p>
-      <p style="font-size: 0.95rem; margin-bottom: 0; line-height: 1.7; color: var(--color-text);">
-        ${data.achievement}
-      </p>
-    `;
-    detailPanel.style.display = "block";
-  }
-}
 
 // ==========================================================================
 // 7. Event Calendar Filters & Cards Rendering
