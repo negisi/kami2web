@@ -1797,3 +1797,100 @@ textarea.form-input {
     gap: 16px;
   }
 }
+
+/* ==========================================================================
+   10. Social Media Links Styles
+   ========================================================================== */
+
+/* Footer Social Links */
+.footer-social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Brand Colors on Hover */
+.social-icon.line:hover {
+  background-color: #06C755;
+}
+
+.social-icon.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-icon.facebook:hover {
+  background-color: #1877F2;
+}
+
+.social-icon.x-twitter:hover {
+  background-color: #000000;
+}
+
+/* Join Social Card */
+.join-social-card {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-top: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.join-social-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.join-social-card h4 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.join-social-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.btn-litlink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-litlink:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
