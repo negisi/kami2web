@@ -12,12 +12,12 @@ const EVENTS_DATA = [
     dateText: "5月",
     month: 5,
     day: 11,
-    title: "定期総会・防犯講話",
+    title: "定期総会",
     location: "上高田高齢者会館",
     category: "meeting",
-    categoryLabel: "総会・防犯",
+    categoryLabel: "総会",
     season: "spring-summer",
-    desc: "新年度のスタートとなる総会と、地域の安全のための防犯講話を合わせて行います。"
+    desc: "新年度のスタートとなる定期総会を行います。"
   },
   {
     id: "event-radio-july",
