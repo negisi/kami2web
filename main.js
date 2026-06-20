@@ -278,7 +278,7 @@ function initNextEventAnnounce() {
           ${categoryIconMap[nextEvent.category] || "📅"}
         </div>
         <div class="notice-text-content">
-          <div class="notice-label">次のまちかど行事案内</div>
+          <div class="notice-label">次の行事案内</div>
           <div class="notice-title">${nextEvent.title}</div>
           <div class="notice-date-loc">
             <span>📅 日程: <strong>${nextEvent.dateText}</strong></span>
@@ -476,7 +476,7 @@ window.openEventModal = function(eventId) {
         <div class="modal-description">
           <p>${event.desc}</p>
           <p style="font-size: 0.9rem; color: var(--color-text-muted); padding-top: 12px; border-top: 1px dashed var(--color-border); margin-top: 20px;">
-            ※詳しい実施計画や集合時間は、近くなりましたら回覧板および当サイト新着情報にてお知らせいたします。
+            ※詳しい実施計画や集合時間は、近くなりましたら町内掲示板、各種SNS、および当サイト新着情報にてお知らせいたします。
           </p>
         </div>
         
