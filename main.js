@@ -33,9 +33,9 @@ const EVENTS_DATA = [
   },
   {
     id: "event-festival-sept",
-    dateText: "9月13日〜14日",
+    dateText: "9月12日〜13日",
     month: 9,
-    day: 13,
+    day: 12,
     title: "二丁目祭り",
     location: "上高田 氷川神社周辺",
     category: "festival",
@@ -45,33 +45,21 @@ const EVENTS_DATA = [
   },
   {
     id: "event-elderly-sept",
-    dateText: "9月15日",
+    dateText: "9月（敬老の日まで）",
     month: 9,
-    day: 15,
+    day: 14,
     title: "敬老事業",
     location: "町内対象者宅",
     category: "meeting",
     categoryLabel: "福祉・敬老",
     season: "spring-summer",
-    desc: "健康長寿を祝い、町内の高齢者の皆様へ心を込めて“お祝い品”をお届けします。"
-  },
-  {
-    id: "event-safety-oct",
-    dateText: "10月4日",
-    month: 10,
-    day: 4,
-    title: "救命法講習会",
-    location: "上高田区民活動センター",
-    category: "safety",
-    categoryLabel: "防災・安全",
-    season: "autumn-winter",
-    desc: "いざという時に大切な人を守るため、AEDの使い方や応急救護などを実践的に学びます。参加者には受講証明が交付されます。"
+    desc: "健康長寿を祝い、9月の敬老の日までに町内の高齢者の皆様へ心を込めて“お祝い品”をお届けします。"
   },
   {
     id: "event-festival-oct",
-    dateText: "10月25日〜26日",
+    dateText: "10月24日〜25日",
     month: 10,
-    day: 25,
+    day: 24,
     title: "第50回 上高田地区まつり",
     location: "上高田地区全体",
     category: "festival",
@@ -81,7 +69,7 @@ const EVENTS_DATA = [
   },
   {
     id: "event-mochi-nov",
-    dateText: "11月30日",
+    dateText: "11月下旬〜12月上旬",
     month: 11,
     day: 30,
     title: "もちつき大会",
@@ -93,19 +81,19 @@ const EVENTS_DATA = [
   },
   {
     id: "event-patrol-dec",
-    dateText: "12月22日〜28日",
+    dateText: "年末",
     month: 12,
-    day: 22,
+    day: 25,
     title: "歳末特別警戒パトロール",
     location: "町内全域",
     category: "safety",
     categoryLabel: "防犯・夜警",
     season: "autumn-winter",
-    desc: "年末の地域の安全を守るため、7日間にわたり夜警（夜回り活動）を実施し、「火の用心」の声とともに新しい年を迎える準備をします。"
+    desc: "年末の地域の安全を守るため、夜警（夜回り活動）を実施し、「火の用心」の声とともに新しい年を迎える準備をします。"
   },
   {
     id: "event-safety-march",
-    dateText: "3月1日",
+    dateText: "3月",
     month: 3,
     day: 1,
     title: "防災フェスタ",
@@ -117,7 +105,7 @@ const EVENTS_DATA = [
   },
   {
     id: "event-delivery-march",
-    dateText: "3月14日",
+    dateText: "3月",
     month: 3,
     day: 14,
     title: "年度末配付物配達事業",
