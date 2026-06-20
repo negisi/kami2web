@@ -9,7 +9,7 @@
 const EVENTS_DATA = [
   {
     id: "event-meeting-may",
-    dateText: "5月11日",
+    dateText: "5月",
     month: 5,
     day: 11,
     title: "定期総会・防犯講話",
@@ -21,7 +21,7 @@ const EVENTS_DATA = [
   },
   {
     id: "event-radio-july",
-    dateText: "7月21日〜30日",
+    dateText: "7月",
     month: 7,
     day: 21,
     title: "なつやすみラジオ体操",
@@ -33,7 +33,7 @@ const EVENTS_DATA = [
   },
   {
     id: "event-festival-sept",
-    dateText: "9月12日〜13日",
+    dateText: "9月",
     month: 9,
     day: 12,
     title: "二丁目祭り",
@@ -45,7 +45,7 @@ const EVENTS_DATA = [
   },
   {
     id: "event-elderly-sept",
-    dateText: "9月（敬老の日まで）",
+    dateText: "9月",
     month: 9,
     day: 14,
     title: "敬老事業",
@@ -57,19 +57,19 @@ const EVENTS_DATA = [
   },
   {
     id: "event-festival-oct",
-    dateText: "10月24日〜25日",
+    dateText: "10月",
     month: 10,
     day: 24,
-    title: "第50回 上高田地区まつり",
+    title: "上高田地区まつり",
     location: "上高田地区全体",
     category: "festival",
     categoryLabel: "お祭り・地域",
     season: "autumn-winter",
-    desc: "地域が一体となって盛り上がる、記念すべき50回目の節目を迎える大きなお祭りです。模擬店や催し物が目白押しです。"
+    desc: "地域が一体となって盛り上がる、秋の大きなお祭りです。模擬店や催し物が目白押しです。"
   },
   {
     id: "event-mochi-nov",
-    dateText: "11月下旬〜12月上旬",
+    dateText: "11月",
     month: 11,
     day: 30,
     title: "もちつき大会",
@@ -81,7 +81,7 @@ const EVENTS_DATA = [
   },
   {
     id: "event-patrol-dec",
-    dateText: "年末",
+    dateText: "12月",
     month: 12,
     day: 25,
     title: "歳末特別警戒パトロール",
