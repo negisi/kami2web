@@ -476,7 +476,7 @@ window.openEventModal = function(eventId) {
         <div class="modal-description">
           <p>${event.desc}</p>
           <p style="font-size: 0.9rem; color: var(--color-text-muted); padding-top: 12px; border-top: 1px dashed var(--color-border); margin-top: 20px;">
-            ※詳しい実施計画や集合時間は、近くなりましたら回覧板および当サイト新着情報にてお知らせいたします。動きやすい服装でぜひお気軽にお越しください！
+            ※詳しい実施計画や集合時間は、近くなりましたら回覧板および当サイト新着情報にてお知らせいたします。
           </p>
         </div>
         
