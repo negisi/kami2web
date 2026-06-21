@@ -554,8 +554,29 @@ function initContactForm() {
     const email = document.getElementById("form-email").value.trim();
     const message = document.getElementById("form-message").value.trim();
 
-    if (!name || !email || !message) {
-      alert("必須項目が入力されていません。");
+    let hasError = false;
+    let firstErrorField = null;
+
+    // Clear previous errors
+    document.querySelectorAll(".error-message").forEach(el => el.textContent = "");
+    document.querySelectorAll(".form-input").forEach(el => el.classList.remove("error"));
+
+    const validateField = (id, value, errorId, errorMsg) => {
+      if (!value) {
+        document.getElementById(errorId).textContent = errorMsg;
+        const field = document.getElementById(id);
+        field.classList.add("error");
+        if (!hasError) firstErrorField = field;
+        hasError = true;
+      }
+    };
+
+    validateField("form-name", name, "error-name", "お名前を入力してください。");
+    validateField("form-email", email, "error-email", "メールアドレスを入力してください。");
+    validateField("form-message", message, "error-message-text", "メッセージ内容を入力してください。");
+
+    if (hasError) {
+      if (firstErrorField) firstErrorField.focus();
       return;
     }
 
@@ -563,7 +584,7 @@ function initContactForm() {
     const submitBtn = form.querySelector(".form-submit-btn");
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<span>⏳ 送信中...</span>`;
+    submitBtn.innerHTML = `<span>⏳ 送信中…</span>`;
 
     // Simulate server request
     setTimeout(() => {
@@ -597,6 +618,8 @@ function showToast(message) {
     toast = document.createElement("div");
     toast.id = "toast-notification";
     toast.className = "toast";
+    toast.setAttribute("aria-live", "polite");
+    toast.setAttribute("role", "status");
     document.body.appendChild(toast);
   }
 
