@@ -233,8 +233,8 @@ function initAccessibilityMode() {
 // 5. Signature Feature: Next Event Auto-Calculator
 // ==========================================================================
 function initNextEventAnnounce() {
-  const nextEventWrap = document.getElementById("next-event-banner");
-  if (!nextEventWrap) return;
+  const nextEventCard = document.getElementById("next-event-card");
+  if (!nextEventCard) return;
 
   // Get current date
   const now = new Date();
@@ -272,27 +272,25 @@ function initNextEventAnnounce() {
   };
 
   const nextEventHtml = `
-    <div class="notice-board">
-      <div class="notice-info">
-        <div class="notice-icon-wrap" aria-hidden="true">
-          ${categoryIconMap[nextEvent.category] || "📅"}
-        </div>
-        <div class="notice-text-content">
-          <div class="notice-label">次の行事案内</div>
-          <div class="notice-title">${nextEvent.title}</div>
-          <div class="notice-date-loc">
-            <span>📅 日程: <strong>${nextEvent.dateText}</strong></span>
-            <span>📍 場所: <strong>${nextEvent.location}</strong></span>
-          </div>
+    <div class="notice-info">
+      <div class="notice-icon-wrap" aria-hidden="true">
+        ${categoryIconMap[nextEvent.category] || "📅"}
+      </div>
+      <div class="notice-text-content">
+        <div class="notice-label">次の行事案内</div>
+        <div class="notice-title">${nextEvent.title}</div>
+        <div class="notice-date-loc">
+          <span>📅 日程: <strong>${nextEvent.dateText}</strong></span>
+          <span>📍 場所: <strong>${nextEvent.location}</strong></span>
         </div>
       </div>
-      <button class="notice-btn" onclick="openEventModal('${nextEvent.id}')">
-        詳細を見る <span class="arrow">&rarr;</span>
-      </button>
     </div>
+    <button class="notice-btn" onclick="openEventModal('${nextEvent.id}')">
+      詳細を見る <span class="arrow">&rarr;</span>
+    </button>
   `;
 
-  nextEventWrap.innerHTML = nextEventHtml;
+  nextEventCard.innerHTML = nextEventHtml;
 }
 
 
