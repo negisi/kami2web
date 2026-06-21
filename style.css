@@ -1772,13 +1772,13 @@ textarea.form-input {
     order: 1;
   }
   .sns-banner-card {
-    order: 2;
+    order: 3;
     grid-column: auto;
     grid-row: auto;
     margin-top: 0;
   }
   .hero-content-left {
-    order: 3;
+    order: 2;
   }
   .event-banner-card {
     order: 4;
