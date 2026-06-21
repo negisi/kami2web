@@ -1750,13 +1750,13 @@ textarea.form-input {
     gap: 40px;
   }
   .hero-content-left {
-    order: 1;
-  }
-  .hero-banners-grid {
     order: 2;
   }
-  .hero-graphic {
+  .hero-banners-grid {
     order: 3;
+  }
+  .hero-graphic {
+    order: 1;
   }
   .hero-card {
     max-width: 100%;
