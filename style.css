@@ -547,16 +547,21 @@ section {
   left: -20px;
 }
 
-/* Grid wrapper for the split banners */
-.hero-banners-grid {
-  grid-column: 1 / -1;
+/* Direct placement for the split banners inside hero-layout */
+.event-banner-card {
+  grid-column: 1;
+  grid-row: 2;
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
 }
 
-.hero-banners-grid .notice-board {
+.sns-banner-card {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 40px;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, #1c3d52 100%);
+}
+
+.hero-layout .notice-board {
   margin-top: 0;
   height: 100%;
   flex-direction: column;
@@ -564,10 +569,6 @@ section {
   justify-content: space-between;
   gap: 24px;
   padding: 28px;
-}
-
-.sns-banner-card {
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, #1c3d52 100%);
 }
 
 .banner-sns-links {
@@ -1747,16 +1748,25 @@ textarea.form-input {
   
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .hero-content-left {
-    order: 2;
-  }
-  .hero-banners-grid {
-    order: 3;
+    gap: 32px;
   }
   .hero-graphic {
     order: 1;
+  }
+  .sns-banner-card {
+    order: 2;
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 0;
+  }
+  .hero-content-left {
+    order: 3;
+  }
+  .event-banner-card {
+    order: 4;
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 0;
   }
   .hero-card {
     max-width: 100%;
@@ -1839,12 +1849,7 @@ textarea.form-input {
     font-size: 1.8rem;
   }
   
-  .hero-banners-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .hero-banners-grid .notice-board {
+  .hero-layout .notice-board {
     gap: 20px;
     padding: 24px;
   }
