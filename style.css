@@ -382,11 +382,6 @@ section {
   max-width: 600px;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
 
 .btn {
   display: inline-flex;
