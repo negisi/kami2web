@@ -468,6 +468,9 @@ section {
   width: 100%;
   max-width: 440px;
   transition: transform var(--transition-normal);
+  grid-column: 2;
+  grid-row: 3;
+  margin-top: 40px;
 }
 
 .hero-card:hover {
@@ -1760,16 +1763,20 @@ textarea.form-input {
     margin-top: 0;
   }
   .hero-content-left {
-    order: 3;
+    order: 4;
   }
   .event-banner-card {
-    order: 4;
+    order: 5;
     grid-column: auto;
     grid-row: auto;
     margin-top: 0;
   }
   .hero-card {
     max-width: 100%;
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 0;
+    order: 3;
   }
   .about-grid {
     grid-template-columns: 1fr;
