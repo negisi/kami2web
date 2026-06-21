@@ -1778,10 +1778,10 @@ textarea.form-input {
     margin-top: 0;
   }
   .hero-content-left {
-    order: 4;
+    order: 3;
   }
   .event-banner-card {
-    order: 5;
+    order: 4;
     grid-column: auto;
     grid-row: auto;
     margin-top: 0;
@@ -1791,7 +1791,7 @@ textarea.form-input {
     grid-column: auto;
     grid-row: auto;
     margin-top: 0;
-    order: 3;
+    order: 5;
   }
   .about-grid {
     grid-template-columns: 1fr;
